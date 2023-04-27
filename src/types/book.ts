@@ -10,15 +10,15 @@
  * @param language 도서 언어
  */
 type Book = {
-  coverURL: string;
-  title: string;
-  description: string;
-  published_date: string;
-  modified_date: string;
-  author: string;
-  publisher: string;
-  language: string;
-};
+    coverURL: string;
+    title: string;
+    description: string;
+    published_date: string;
+    modified_date: string;
+    author: string;
+    publisher: string;
+    language: string;
+}
 
 /**
  * @type
@@ -29,12 +29,17 @@ type Book = {
  * @param marginVertical 세로 여백
  */
 export type BookStyle = {
-  fontFamily: BookFontFamily;
-  fontSize: number;
-  lineHeight: number;
-  marginHorizontal: number;
-  marginVertical: number;
-};
+    fontFamily: BookFontFamily;
+    fontSize: number;
+    lineHeight: number;
+    marginHorizontal: number;
+    marginVertical: number;
+    userSelect?: string;
+    MozUserSelect?: string,
+    KhtmlUserSelect?: string,
+    WebkitUserSelect?: string,
+    MsUserSelect?: string,
+}
 
 /**
  * @type
@@ -43,7 +48,7 @@ export type BookStyle = {
  */
 export type BookFontFamily = 'Origin' | 'Roboto';
 
-export type BookFlow = 'paginated' | 'scrolled-doc';
+export type BookFlow = "paginated" | "scrolled-doc";
 
 /**
  * @type
@@ -52,9 +57,9 @@ export type BookFlow = 'paginated' | 'scrolled-doc';
  * @param spread 펼쳐보기 여부
  */
 export type BookOption = {
-  flow: BookFlow;
-  resizeOnOrientationChange: boolean;
-  spread: 'auto' | 'none';
-};
+    flow: BookFlow,
+    resizeOnOrientationChange: boolean,
+    spread: "auto" | "none"
+}
 
-export default Book;
+export default Book

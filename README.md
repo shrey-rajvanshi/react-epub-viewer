@@ -5,7 +5,6 @@
     <br />
 </div>
 
-
 # React-Epub-Viewer
 
 [![Latest Stable Version](https://img.shields.io/npm/v/react-epub-viewer.svg?style=for-the-badge)](https://www.npmjs.com/package/react-epub-viewer) [![License](https://img.shields.io/badge/license-mit-red.svg?style=for-the-badge)](https://www.npmjs.com/package/react-epub-viewer) 
@@ -22,10 +21,7 @@ You can use React-Epub-Viewer together with React.
 
 ## Getting Started
 
-📢 **[Online Demo](https://altmshfkgudtjr.github.io/react-epub-viewer)**
-👉 You can check the **[Demo Code](https://github.com/altmshfkgudtjr/react-epub-viewer/tree/demo)**
-
-
+📢 **[Online demo](https://altmshfkgudtjr.github.io/react-epub-viewer)**
 
 **Features**
 
@@ -99,9 +95,9 @@ You can see also Types for React-Epub-Viewer [here](https://github.com/altmshfkg
 
 ### EpubViewer Props
 
-- `ref` - [RefObject] Viewer Ref
+- `ref` [RefObject] Viewer Ref
 
-- `url` - [string] - Epub file path
+- `url` [string] - Epub file path
 - `epubFileOptions` - [[object](http://epubjs.org/documentation/0.3/#book)] Epub file option (Epub.js BookOption)
 - `epubOptions` - [[object](http://epubjs.org/documentation/0.3/#rendition)] Epub viewer option (Epub.js RenditionOption)
 - `style` - [object] Epub wrapper style
@@ -117,9 +113,9 @@ You can see also Types for React-Epub-Viewer [here](https://github.com/altmshfkg
 
 ### ReactEpubViewer Props
 
-- `ref` - [RefObject] Viewer Ref
+- `ref` [RefObject] Viewer Ref
 
-- `url` - [string] Epub file path
+- `url` [string] - Epub file path
 - `viewerLayout` - [object] Viewer layout values (header height, footer height, etc...)
 - `viewerOption` - [object] Viewer option (whether is flow or is spread)
 - `onBookInfoChange` - [function] Run when book information changed
@@ -137,8 +133,4 @@ You can see also Types for React-Epub-Viewer [here](https://github.com/altmshfkg
 ---
 
 
-
-# Contribuing
-
-If you would like to contribute, please follow the [guideline](https://github.com/altmshfkgudtjr/react-epub-viewer/blob/main/CONTRIBUTING.md)! Thank you! 😀
 

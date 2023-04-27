@@ -1,6 +1,6 @@
 {
   "name": "react-epub-viewer",
-  "version": "0.2.0",
+  "version": "0.1.9",
   "author": {
     "name": "NB",
     "email": "altmshfkgudtjr@naver.com"
@@ -32,46 +32,49 @@
     "prebuild": "react-scripts test --watchAll=false --passWithNoTests",
     "build": " react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "clean": "rimraf lib",
     "precompile": "react-scripts test --watchAll=false --passWithNoTests && yarn clean",
     "compile": "babel src --out-dir lib --extensions .ts,.tsx",
-    "postcompile": "cp -r ./src/types ./lib/types"
+    "postcompile": "cp -r ./src/types ./lib/types",
+    "preinstall": "npx patch-package react-epub-viewer; rm -rf node_modules/",
+    "postinstall": "npx patch-package"
   },
   "dependencies": {
-    "epubjs": "0.3.93",
-    "react-scripts": "5.0.0"
+    "epubjs": "^0.3.88",
+    "react-epub-viewer": "^0.1.9"
   },
   "devDependencies": {
-    "@babel/cli": "7.18.10",
-    "@babel/plugin-proposal-class-properties": "7.18.6",
-    "@babel/plugin-proposal-object-rest-spread": "7.18.9",
-    "@babel/plugin-proposal-optional-chaining": "7.18.9",
-    "@babel/preset-env": "7.18.10",
-    "@babel/preset-react": "7.18.6",
-    "@babel/preset-typescript": "7.18.6",
-    "@testing-library/jest-dom": "5.16.5",
-    "@testing-library/react": "13.3.0",
-    "@testing-library/user-event": "12.8.3",
-    "@types/jest": "26.0.24",
-    "@types/node": "16.11.49",
-    "@types/react": "17.0.50",
-    "@types/react-dom": "17.0.17",
-    "@types/styled-components": "5.1.26",
-    "@typescript-eslint/eslint-plugin": "5.33.1",
+    "@babel/cli": "^7.13.14",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.12",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@reduxjs/toolkit": "^1.5.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.1.16",
+    "@types/styled-components": "^5.1.7",
     "babel-plugin-module-resolver": "4.0.0",
-    "eslint": "8.24.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-react": "7.31.8",
-    "eslint-plugin-react-hooks": "4.6.0",
-    "prettier": "2.7.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "styled-components": "5.3.5",
-    "typescript": "4.7.4"
+    "babel-plugin-styled-components": "^1.12.0",
+    "gh-pages": "^3.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.3",
+    "react-scripts": "^5.0.0",
+    "styled-components": "^5.2.3",
+    "typescript": "^4.2.3"
   },
   "peerDependencies": {
-    "react": ">=17.0.1",
-    "react-dom": ">=17.0.1"
+    "react": ">=17.0.1"
   },
   "eslintConfig": {
     "extends": [
