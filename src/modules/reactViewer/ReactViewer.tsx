@@ -39,7 +39,7 @@ const ReactViewer = (
     url,
     viewerLayout,
     viewerStyle,
-    viewerStyleURL,
+    // viewerStyleURL,
     viewerOption,
     onBookInfoChange,
     onPageChange,
@@ -294,9 +294,9 @@ const ReactViewer = (
       Object.assign(newStyle.body, {});
     }
 
-    if (!!viewerStyleURL) {
-      rendition.themes.registerUrl('main', viewerStyleURL);
-    }
+    // if (!!viewerStyleURL) {
+    //   rendition.themes.registerUrl('main', viewerStyleURL);
+    // }
 
     rendition.themes.register('default', newStyle);
 
@@ -306,7 +306,6 @@ const ReactViewer = (
     bookStyle.fontFamily,
     bookStyle.fontSize,
     bookStyle.lineHeight,
-    viewerStyleURL,
     bookOption,
     onResize,
   ]);
